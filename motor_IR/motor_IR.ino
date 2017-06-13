@@ -41,10 +41,32 @@ void loop() {
       digitalWrite(10, HIGH);
       digitalWrite(6, LOW);
       digitalWrite(11, LOW);
+     
       
       Serial.print('S');
       delay(100);
     }
+
+       if (results.value == 40000){
+      digitalWrite(5, LOW);
+      digitalWrite(10, LOW);
+      digitalWrite(6, LOW);
+      digitalWrite(11, LOW);
+       }
+
+         if (results.value == 822218){
+      digitalWrite(5, HIGH);
+      digitalWrite(10, LOW);
+      digitalWrite(6, LOW);
+      digitalWrite(11, LOW);
+       }
+
+       if (results.value == 891850){
+      digitalWrite(5, LOW);
+      digitalWrite(10, HIGH);
+      digitalWrite(6, LOW);
+      digitalWrite(11, LOW);
+       }
     //Serial.println(results.value);
     //Serial.println(results.value, HEX);
     irrecv.resume(); // Receive the next value
